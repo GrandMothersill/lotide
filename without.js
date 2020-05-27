@@ -26,5 +26,8 @@ const without = function(source, itemsToRemove) {
       moddedArray.push(source[s]);
     }
   }
-  return moddedArray;
+  console.log(moddedArray);
 };
+
+without([1, 2, 3], [1]) // => [2, 3]
+without(["1", "2", "3"], [1, 2, "3"])
