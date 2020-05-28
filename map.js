@@ -19,27 +19,20 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
+const words = ["ground", "control", "to", "major", "tom"];
+const words2 = ["look", "at", "the", "sky"];
+const words3 = ["so", 'say', 'we', 'all'];
 
-const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    let x = sentence[i];
-    if (x !== ' ') {
-      if (!results[x]) {
-        results[x] = [i];
-      } else {
-        results[x].push(i);
-      }
-    }
+const map = function(array, callback) {
+  const results = [];
+  for (let item of array) {
+    results.push(callback(item));
   }
-
   return results;
 };
 
-const result1 = letterPositions("hello");
-console.log(result1);
-assertArraysEqual(result1['l'], [2, 3]);
+const results1 = map(words, word => word[0]);
 
-const result2 = letterPositions("lighthouse in the house");
-console.log(result2);
-assertArraysEqual(result2['h'], [3, 5, 15, 18]);
+assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
+assertArraysEqual(map(words2, word => word[0]), ['l', 'a', 't', 's']);
+assertArraysEqual(map(words3, word => word[0]), ['s', 's', 'w', 'a']);
