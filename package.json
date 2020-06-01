@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@grandmothersill/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "some mediocre functions created by a less-than-mediocre baby dev. use at own risk",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/GrandMothersill/lotide.git"
   },
-  "author": "",
+  "author": "Graham Mothersill <graham.mothersill@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GrandMothersill/lotide/issues"

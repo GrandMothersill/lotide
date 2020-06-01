@@ -19,11 +19,11 @@
 //   }
 // };
 
-const without = function(source, itemsToRemove) {
+const without = function(array, itemsToRemove) {
   let moddedArray = [];
-  for (let s = 0; s < source.length; s++) {
-    if (!itemsToRemove.includes(source[s])) {
-      moddedArray.push(source[s]);
+  for (let s = 0; s < array.length; s++) {
+    if (!itemsToRemove.includes(array[s])) {
+      moddedArray.push(array[s]);
     }
   }
   return (moddedArray);

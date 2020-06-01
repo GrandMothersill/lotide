@@ -7,12 +7,10 @@
 // };
 
 
-// allItems = array
-// itemsToCount = object
-const countOnly = function(allItems, itemsToCount) {
+const countOnly = function(array, object) {
   let results = {};
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
+  for (const item of array) {
+    if (object[item]) {
       if (results[item]) {
         results[item] += 1;
       } else {
@@ -42,3 +40,5 @@ module.exports = countOnly;
 // assertEqual(result1["Jason"], 1);
 // assertEqual(result1["Karima"], undefined);
 // assertEqual(result1["Fang"], 2);
+
+// console.log(result1);

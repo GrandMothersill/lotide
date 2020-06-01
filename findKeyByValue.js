@@ -7,13 +7,12 @@
 // };
 
 const findKeyByValue = function(object, soughtValue) {
-  let result = undefined;
   for (const key in object) {
     if (object[key] === soughtValue) {
-      result = key;
+      return key;
     }
   }
-  return result;
+  return undefined;
 };
 
 module.exports = findKeyByValue;
